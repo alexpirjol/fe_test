@@ -1,0 +1,40 @@
+.menu{
+    margin-top: $header-height;
+    height: $menu-height;
+    @include background-image(linear-gradient(adjust-lightness($menu-bg-color, 30%), $menu-bg-color));
+    
+    ul{
+        &.navbar-default{
+            background-color: transparent;
+        }
+
+        li{
+            padding-top:  $menu-height / 2;
+            float: left;
+            &.active{
+                position:relative;
+                background-color: $menu-active-bg-color;
+                &:after {
+                    top: 100%;
+                    left: 50%;
+                    border: solid transparent;
+                    content: " ";
+                    height: 0;
+                    width: 0;
+                    position: absolute;
+                    pointer-events: none;
+                    border-color: rgba(174, 50, 50, 0);
+                    border-top-color: $menu-active-bg-color;
+                    border-width: 15px;
+                    margin-left: -15px;
+                }
+            }
+            a{
+                color: #fff;
+                &:hover{
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+}

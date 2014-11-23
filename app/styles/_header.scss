@@ -1,0 +1,93 @@
+.header{
+    background-color: #fff;
+    color: gray;
+    -webkit-filter: drop-shadow(0px 12px 7px rgba(0,0,0,.5));
+    filter: url(/assets/svg/shadow.svg#drop-shadow);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=5, Direction=135, Color='rgba(0,0,0,0.5)')";
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=5,Direction=135,Color='rgba(0,0,0,0.3)');
+    &.auto{
+      height: auto !important;
+      a{
+        margin-top: 5px;
+      }
+    }
+    &, *{
+        box-sizing: initial;
+        &:before,
+        &:after{
+            box-sizing: initial;
+        }
+    }
+
+    &.top{
+        height: $header-height;
+    }
+    .container{
+        position: relative;
+        
+        p{
+            margin: 20px 0 8px 0;
+        }
+
+        .logo{
+            margin: 0 auto;
+            width: 226px;
+            text-align: center;
+            background-color: #fff;
+            padding:10px;
+            position:relative;
+            @include border-radius(10px);
+        }
+
+        .contact{
+            float: left;
+            a{
+                display: inline-block;
+                width: 27px;
+                height: 27px;
+                margin-right: 5px;
+                background: url(../images/spriteContact.png) no-repeat 0 0;
+
+                &.email{
+                    background-position-x: -33px;
+                }
+                &.mess{
+                    background-position-x: -68px;
+                }
+            }
+        }
+
+        .social-icons{
+            float: right;
+            a{
+                display: inline-block;
+                $icon-size: 24px;
+                width: $icon-size;
+                height: $icon-size;
+                background: url(../images/socialIconsSprite.png) no-repeat 0 0;
+                & + a{
+                    margin-left: 3px;
+                }
+                &:hover{
+                    background-position-y:-$icon-size;
+                }
+                &.s2{
+                    background-position-x: -$icon-size;
+                }
+                &.s3{
+                    background-position-x: -$icon-size * 2;
+                }
+                &.s4{
+                    background-position-x: -$icon-size * 3;
+                }
+                &.s5{
+                    background-position-x: -$icon-size * 4;
+                }
+                &.s6{
+                    background-position-x: -$icon-size * 5;
+                }
+                
+            }
+        }
+    }
+}

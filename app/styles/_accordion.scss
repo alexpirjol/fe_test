@@ -1,0 +1,79 @@
+/*Define Accordion box*/
+.accordion { 
+    width:100%;
+    overflow:hidden;
+    margin:10px auto;
+    color:#474747;
+    background:#d5d5d5;
+    padding:10px; 
+    /*Set style of open slide*/
+    h2{color: #333; font-size:14px;}
+    section{
+        float:left;
+        overflow:hidden; 
+        color:#f5f5f5; 
+        cursor:pointer; 
+        background: #f5f5f5; 
+        margin:3px;
+        &.open { 
+            background:#FFF;
+            padding:10px;
+            &:hover{
+                background:#FFF;
+            }
+            h2 {
+                width:100%;
+                a{ 
+                    color:#333;
+                    padding:0;
+                }
+            }
+            p {
+                display:block;
+                color:#333; 
+            }
+        }
+        h2 a{
+            padding:8px 10px;
+            display:block;
+            font-size:16px; 
+            font-weight:normal;
+            color:#333; 
+            text-decoration:none; 
+        }
+        p { display:none; }
+        /*set style of closed slide*/
+        &:after{position:relative;font-size:24px;color:#000;font-weight:bold;}
+        &:nth-child(1):after{content:'1';}
+        &:nth-child(2):after{content:'2';}
+        &:nth-child(3):after{content:'3';}
+        &:nth-child(4):after{content:'4';}
+        &:nth-child(5):after{content:'5';}
+    }
+}
+.horizontal section{ 
+    width:5%; height:280px;
+    -moz-transition:width 0.2s ease-out;
+    -webkit-transition:width 0.2s ease-out;
+    -o-transition:width 0.2s ease-out;
+    -ms-transition:width 0.2s ease-out;
+    transition:width 0.2s ease-out;
+}
+.horizontal section:after{top:180px;left:20px;}
+.horizontal section h2 {
+    -webkit-transform:rotate(90deg);
+    -moz-transform:rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    width:270px; position:relative; left:-108px; top:100px;
+}
+.horizontal section.open{ width:76%;height:280px; }
+.horizontal section.open h2{ top:0px;left:0;
+    color: inherit;
+    -webkit-transform:rotate(0deg);
+    -moz-transform:rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+}

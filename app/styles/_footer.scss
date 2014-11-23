@@ -1,0 +1,19 @@
+.footer{
+    color: #fff;
+    margin-top: 45px;
+    
+    h3{
+        margin-top: 0;
+    }
+
+    ul{
+        padding-left: 10px;
+        li{
+            list-style: none;
+            a{
+                text-decoration: underline;
+                color: inherit;
+            }
+        }
+    }
+}
